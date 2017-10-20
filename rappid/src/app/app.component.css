@@ -1,0 +1,17 @@
+div#paper {
+    margin: 0 auto;
+    border: 5px solid black;
+    box-shadow: 6px 6px 6px 6px grey;
+    background-image: linear-gradient(to bottom right, rgba(255,255,188,0.9), rgba(255,242,218,0.9));
+}
+
+h2.title {
+    position: relative;
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 5px 1px 2px grey;
+}
+
+
