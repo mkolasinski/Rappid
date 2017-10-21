@@ -121,7 +121,8 @@ export class AppComponent implements OnInit {
                     stroke: '#000000',
                     'stroke-width': 2,
                     rx: 10,
-                    ry: 10
+                    ry: 10,
+                    'cursor': 'pointer'
                 },
                 text: {
                     text: 'Initialize new project',
@@ -136,6 +137,9 @@ export class AppComponent implements OnInit {
 
         let taskNo2 = taskNo1.clone();
         (taskNo2 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
             text: {
                 text: 'Create user profile'
             }
@@ -144,6 +148,9 @@ export class AppComponent implements OnInit {
 
         let taskNo3 = taskNo2.clone();
         (taskNo3 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
             text: {
                 text: 'Create log in window'
             }
@@ -152,12 +159,62 @@ export class AppComponent implements OnInit {
 
         let taskNo4 = taskNo3.clone();
         (taskNo4 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
             size: { width: 110, height: 40 },
             text: {
-                text: 'Adding avatar',
-                'overflow':'hidden'
+                text: 'Adding avatar'
             },
         });
         graph.addCell(taskNo4);
+
+        let taskNo5 = taskNo4.clone();
+        (taskNo5 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
+            size: { width: 110, height: 40 },
+            text: {
+                text: 'Styles'
+            }
+        });
+        graph.addCell(taskNo5);
+
+        let taskNo6 = taskNo5.clone();
+        (taskNo6 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
+            size: { width: 110, height: 40 },
+            text: {
+                text: 'API'
+            }
+        });
+        graph.addCell(taskNo6);
+
+        let taskNo7 = taskNo6.clone();
+        (taskNo7 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
+            size: { width: 110, height: 40 },
+            text: {
+                text: 'Create forms'
+            }
+        });
+        graph.addCell(taskNo7);
+
+        let taskNo8 = taskNo6.clone();
+        (taskNo8 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
+            size: { width: 110, height: 40 },
+            text: {
+                text: 'Adding libraries'
+            }
+        });
+        graph.addCell(taskNo8);
     }
 }
