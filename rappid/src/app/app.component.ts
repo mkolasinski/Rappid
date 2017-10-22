@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import * as joint from 'jointjs';
 import * as $ from 'jquery';
 
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -205,7 +204,7 @@ export class AppComponent implements OnInit {
         });
         graph.addCell(taskNo7);
 
-        let taskNo8 = taskNo6.clone();
+        let taskNo8 = taskNo7.clone();
         (taskNo8 as any).translate(0, 40).attr({
             rect: {
                 'cursor': 'pointer'
@@ -216,5 +215,67 @@ export class AppComponent implements OnInit {
             }
         });
         graph.addCell(taskNo8);
+
+        let taskNo9 = taskNo8.clone();
+        (taskNo9 as any).translate(0, 40).attr({
+            rect: {
+                'cursor': 'pointer'
+            },
+            size: { width: 110, height: 40 },
+            text: {
+                text: 'Music in project'
+            }
+        });
+        graph.addCell(taskNo9);
+
+        let link1 = new joint.dia.Link({
+            source: { id: mainCircle.id},
+            target: { id: develop.id}
+        });
+
+        let link2 = new joint.dia.Link({
+            source: { id: mainCircle.id},
+            target: { id: developOther.id}
+        });
+
+        let link3 = new joint.dia.Link({
+            source: { id: mainCircle.id},
+            target: { id: developOther2.id}
+        });
+
+        let link4 = new joint.dia.Link({
+            source: { id: mainCircle.id},
+            target: { id: developOther3.id}
+        });
+
+        link1.attr({
+            '.connection': {
+                stroke: 'orange',
+                'stroke-width': 3,
+            }
+        });
+
+        link2.attr({
+            '.connection': {
+                stroke: 'orange',
+                'stroke-width': 3
+            }
+        });
+
+        link3.attr({
+            '.connection': {
+                stroke: 'orange',
+                'stroke-width': 3
+            }
+        });
+
+        link4.attr({
+            '.connection': {
+                stroke: 'orange',
+                'stroke-width': 3
+            }
+        });
+
+        graph.addCell([link1, link2, link3, link4]);
     }
 }
