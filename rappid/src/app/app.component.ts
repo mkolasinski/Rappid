@@ -254,6 +254,10 @@ export class AppComponent implements OnInit {
                 'stroke-width': 3,
             }
         });
+        link1.set('connector', {
+            name: 'rounded',
+            args: { radius: 10 }
+        } );
 
         link2.attr({
             '.connection': {
